@@ -1,5 +1,6 @@
 /* Новые элементы должны добавляться в список по нажатию на Enter */
 /* Пустые элементы не должны добавляться */
+/* Очищать input после добавления нового элемента в список */
 
 const sendInput = document.getElementById('input');
 const messagesContainer = document.querySelector('.items');
@@ -16,10 +17,7 @@ sendInput.addEventListener('keyup', function(event) {
         sendInput.value = '';
     };
 
-
 });
-
-
 
 /* Если кликнуть на элемент списка, он зачеркивается */
 /* Если кликнуть повторно уже на зачеркнутый, он снова становится обычным */
@@ -30,5 +28,3 @@ messagesContainer.addEventListener("click", (el) => {
         parentDiv.classList.toggle("done");
     }
 });
-
-/* Очищать input после добавления нового элемента в список */
